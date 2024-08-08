@@ -13,5 +13,5 @@ export class CreateCatDto {
 
     @IsString()
     @IsOptional()
-    breed: string;
+    breed?: string;
 }

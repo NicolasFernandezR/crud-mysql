@@ -25,3 +25,15 @@ Content-Type: application/json
     "age": 21,
     "rol": "admin"
 }
+
+#### breed create
+POST http://localhost:3000/api/v1/breeds
+Content-Type: application/json
+
+{
+    "name": "afgano"
+}
+
+#### breed get
+GET http://localhost:3000/api/v1/breeds
+
