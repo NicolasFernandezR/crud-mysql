@@ -6,9 +6,9 @@ POST http://localhost:3000/api/v1/cats
 Content-Type: application/json
 
 {
-    "name": "garfield",
-    "age": 7,
-    "breed": "persian"
+    "name": "patroclo",
+    "age": 2,
+    "breed": "callejero"
 }
 
 ### get cats by id
@@ -31,9 +31,42 @@ POST http://localhost:3000/api/v1/breeds
 Content-Type: application/json
 
 {
-    "name": "afgano"
+    "name": "callejero"
 }
 
 #### breed get
 GET http://localhost:3000/api/v1/breeds
 
+### login user
+
+POST http://localhost:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "  ",
+    "password": "  "
+}
+
+### register user
+
+POST http://localhost:3000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "username": "user",
+    "email": "example@gmail.com",
+    "password": "admin123"
+}
+### login user
+POST http://localhost:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "example@gmail.com",
+    "password": "admin123"
+}
+### profile user
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAZ21haWwuY29tIiwiaWF0IjoxNzIzNTEwMTY4LCJleHAiOjE3MjM1OTY1Njh9.HlKMavwPIh2BpTjk_IR4rijs2xkVHd0Ww1rMUkzkCnc
+
+GET http://localhost:3000/api/v1/auth/profile
+Authorization: Bearer {{authToken}}
