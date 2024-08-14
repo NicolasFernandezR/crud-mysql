@@ -66,7 +66,7 @@ Content-Type: application/json
     "password": "admin123"
 }
 ### profile user
-@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAZ21haWwuY29tIiwiaWF0IjoxNzIzNTEwMTY4LCJleHAiOjE3MjM1OTY1Njh9.HlKMavwPIh2BpTjk_IR4rijs2xkVHd0Ww1rMUkzkCnc
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MjM2NjgzMjIsImV4cCI6MTcyMzc1NDcyMn0.qHN2bDHrT540fvDQ1J6zTXf3UEp5gvQvJ1PVIkDicJU
 
 GET http://localhost:3000/api/v1/auth/profile
 Authorization: Bearer {{authToken}}
