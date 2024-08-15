@@ -20,6 +20,15 @@ import { ConfigModule } from '@nestjs/config';
       database: process.env.POSTGRES_DATABASE,
       autoLoadEntities: true, // carga las entidades de forma automatica
       synchronize: true, // no usar en produccion
+      ssl: process.env.POSTGRES_SSL === 'true',
+      extra: {
+        ssl:
+          process.env.POSTGRES_SSL === 'true'
+            ? {
+                rejectUnauthorized: false,
+              }
+            : null,
+      },
     }),
     BreedsModule,
     UsersModule,
